@@ -12,11 +12,8 @@ class VideoProcess:
 
             while True:
                 frame = self.source.read_frame()
-                frameTwo = self.source.print_message()
 
-                print(frameTwo)
-
-                if frame is not None:
+                if frame is None:
                     break
                 frames_processed += 1
             print(f"Total frames processed: {frames_processed}")
